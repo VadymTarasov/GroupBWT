@@ -2,47 +2,38 @@
 
 class Vector
 {
+    /*
+    5) Реализовать класс 2-х мерный вектор.
+    Класс должен содержать приватные атрибуты x и y - координаты точки куда направлен вектор, а также публичные методы:
+    сложение векторов (принимает на вход другой объект класса Вектор)
+    вычитание векторов (принимает на вход другой объект класса Вектор)
+    умножение вектора на число (принимает на вход число)
+    вывод вектора на печать (вывод строки содержащей информацию про объект)
+    */
+
+
+    /**
+     * @var int
+     */
     private $x;
+    /**
+     * @var int
+     */
     private $y;
 
-
-    function __construct($xx)
+    public function __construct(int $x, int $y)
     {
-        $this->x = $xx;
-
+        $this->x = $x;
+        $this->y = $y;
     }
 
-    public function PrintVect()
+    public function sumVector(Vector $vector)
     {
-
-        for ($i = 0; $i < count($this->x);$i++)
-        {
-            for($j = 0; $j < count($this->x[$i]);$j++)
-            {
-                echo $this->x[$i][$j];
-            }
-            echo "<br/>";
-        }
-
-
-    }
-
-    public function sum($yy)
-    {
-        $this->y = $yy;
-
-        for ($i = 0; $i < count($this->x);$i++)
-        {
-            for($j = 0; $j < count($this->x[$i]);$j++)
-            {
-
-                echo $this->x[$i][$j]+$this->y[$i][$j];
-            }
-            echo "<br/>";
-        }
 
     }
 
 
 
 }
+$v1 = new Vector(2,5);
+var_dump($v1);
